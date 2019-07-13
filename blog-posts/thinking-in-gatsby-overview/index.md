@@ -8,7 +8,7 @@ series:
 canonical_url:
 ---
 
-[![Photo by Ovidiu Gruescu on Unsplash](./assets/ovidiu-gruescu-boJRk86YW5k-unsplash-2000.jpg)](<javascript:void(0)>)
+![Photo by Ovidiu Gruescu on Unsplash](./assets/ovidiu-gruescu-boJRk86YW5k-unsplash-2000.jpg)
 
 As the one of the top static site generators, Gatsby have gained much momentum since last year. According to a recent statistics [charts](https://npm-stat.com/charts.html?package=gatsby&from=2018-07-04&to=2019-07-04) show that the average downloads per week reach 200k around. Many web developers are attracted by its slogan: **`build blazing fast websites and apps`**, I am among them luckily. At the first impression, it may seems easy to start, but when you delve into it, things not like that.
 
