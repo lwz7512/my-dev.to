@@ -4,6 +4,7 @@
     "type": "git",
     "url": "https://github.com/lwz7512/my-dev.to.git"
   },
+  "license": "MIT",
   "scripts": {
     "prettier": "prettier",
     "embedme": "embedme blog-posts/**/*.md",

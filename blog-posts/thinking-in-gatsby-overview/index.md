@@ -8,9 +8,9 @@ series:
 canonical_url:
 ---
 
-[![Photo by Ovidiu Gruescu on Unsplash](./assets/ovidiu-gruescu-boJRk86YW5k-unsplash-2000.jpg)](javascript:void(0))
+[![Photo by Ovidiu Gruescu on Unsplash](./assets/ovidiu-gruescu-boJRk86YW5k-unsplash-2000.jpg)](<javascript:void(0)>)
 
-As the one of the top static site generators, Gatsby have gained much momentum since last year. According to a recent  statistics [charts](#extread) show that the average downloads per week reach 200k around. Many web developers are attracted by its slogan: **`build blazing fast websites and apps`**, I am among them luckily. At the first impression, it may seems easy to start, but when you delve into it, things not like that.
+As the one of the top static site generators, Gatsby have gained much momentum since last year. According to a recent statistics [charts](https://npm-stat.com/charts.html?package=gatsby&from=2018-07-04&to=2019-07-04) show that the average downloads per week reach 200k around. Many web developers are attracted by its slogan: **`build blazing fast websites and apps`**, I am among them luckily. At the first impression, it may seems easy to start, but when you delve into it, things not like that.
 
 <!-- end -->
 
@@ -18,21 +18,20 @@ As the one of the top static site generators, Gatsby have gained much momentum s
 
 7 months ago, I was looking for a web development framework to build a new elearning product, the ideal candidate should meet this tech requirements:
 
-* easy to get started
-* no database dependency
-* reactjs as front end
-* markdown file as content source
-* great performance while running
-* scalability in customization dev
-* lower cost for deployment
-* no need content editor in backend
+- easy to get started
+- no database dependency
+- reactjs as front end
+- markdown file as content source
+- great performance while running
+- scalability in customization dev
+- lower cost for deployment
+- no need content editor in backend
 
 All this conditions together point to a final solution: a static CMS, then I found the StaticGen. Among the top 5 frameworks, Jekyll, Hugo, Hexo, are not unfamiliar to me. They all use markdown file as content source, but not reactjs tech stack. The first one Next.js, whereas, do not support rendering markdown file to html page by default. In the end, I choose Gatsby as my final dev platform for it meet almost all my requirements.
 
-
 ### How to design the project structure
 
-We all know that how to create a reactjs application skeleton using **`create-react-app`**. Gatsby also has its cli tool **`gatsby`** to complete some tasks like project creation, start dev server, build project to production deployment and such. 
+We all know that how to create a reactjs application skeleton using **`create-react-app`**. Gatsby also has its cli tool **`gatsby`** to complete some tasks like project creation, start dev server, build project to production deployment and such.
 
 A typical [gatsby site structure](https://www.gatsbyjs.org/docs/gatsby-project-structure/) created by **`$ gatsby new my-gatsby-site`** may like this:
 
@@ -63,7 +62,6 @@ The top red rectangle outlines the **`content`** directory which contains blog p
 
 Other good practices in planning project structure may include putting **`hooks`** and **`style`** directory under src directory, hooks contains all the hook components, and style contains all the css module file separated from those template and page components. My preferred **`src`** structure may like this:
 
-    
     ├── src
       ├── components
       ├── hooks
@@ -72,9 +70,7 @@ Other good practices in planning project structure may include putting **`hooks`
       ├── templates
       ├── utils
 
-
 Official Gatsby Project Structure document is [here](https://www.gatsbyjs.org/docs/gatsby-project-structure/)
-
 
 ### How's the Gatsby dev workflow look like
 
@@ -90,7 +86,7 @@ Here, I would like to summarize the process into a simple graph:
 
 While developing Gatsby applications, we must understand 2 important config files first: **`gatsby-config.js`** and **`gatsby-node.js`**. One is for website metadata definition and plugins reference, another is for build process callback functions implementation.
 
-That are the major difference from the traditional web development. In traditional web development workflow, we start web server, read application related config such as port number, DB access account and other global parameters, then expose service to client request. But in Gatsby, we don't run service in server, we create content in build time through plugins and callback functions, then deliver them to CDN. 
+That are the major difference from the traditional web development. In traditional web development workflow, we start web server, read application related config such as port number, DB access account and other global parameters, then expose service to client request. But in Gatsby, we don't run service in server, we create content in build time through plugins and callback functions, then deliver them to CDN.
 
 Simply put, Gatsby workflow can be outlined in such a diagram:
 
@@ -104,16 +100,15 @@ Wait, what if the data is not in file but in DB or 3rd part system? The anwser i
 
 So, to work with Gatsby, you must think in a Gatsby way, just as the above diagram described:
 
-* using **`Plugin`** to fetch and convert source data to the Gatsby known data model 
-* using **`Graphql`** to query UI/template needed data from Gatsby
-* using build **`Hooks`**(callback functions) to generate html content from template components.
-
+- using **`Plugin`** to fetch and convert source data to the Gatsby known data model
+- using **`Graphql`** to query UI/template needed data from Gatsby
+- using build **`Hooks`**(callback functions) to generate html content from template components.
 
 ### What changes does it take to the front devs
 
-Web framework emerging endless, but excellent framework is so rare. In numerous JAMstack solutions, I believe that Gatsby is the most distinctive and innovative. Gatsby claims that it can build website with a blazing fast user experience, Lighthouse test in its [official document](https://www.gatsbyjs.org/docs/audit-with-lighthouse/) proved their statement. How did they make it? 
+Web framework emerging endless, but excellent framework is so rare. In numerous JAMstack solutions, I believe that Gatsby is the most distinctive and innovative. Gatsby claims that it can build website with a blazing fast user experience, Lighthouse test in its [official document](https://www.gatsbyjs.org/docs/audit-with-lighthouse/) proved their statement. How did they make it?
 
-[The idea](https://www.gatsbyjs.org/docs/gatsby-core-philosophy/) behind the product and [the architecture pattern](https://www.gatsbyjs.org/docs/prpl-pattern/) they are following ensure its high performance. 
+[The idea](https://www.gatsbyjs.org/docs/gatsby-core-philosophy/) behind the product and [the architecture pattern](https://www.gatsbyjs.org/docs/prpl-pattern/) they are following ensure its high performance.
 
 For a normal developer, this may mean a lot when you want to develop a prototype web application, deliver user a great user experience without taking pain to tune it little by little, furthermore, you don't have much money to purchase database service and web server.
 
@@ -121,16 +116,15 @@ Take my first Gatsby project [UltronEle](http://ultronele.com) for example, I to
 
 Without Gatsby framework, I doubt if my product would be born so soon. Although the initial exploration phase in Gatsby felt a little confusion, but the whole development experience was so cool.
 
-Gatsby's popularity may predict a better internet, the next generation of internet technology, with high speed display, excellent user experience, light weight deployment, lower cost to develop and use. This change would bring web developers and IT service sector plenty of potential opportunities. 
-
+Gatsby's popularity may predict a better internet, the next generation of internet technology, with high speed display, excellent user experience, light weight deployment, lower cost to develop and use. This change would bring web developers and IT service sector plenty of potential opportunities.
 
 ### Are there any pits still exist
 
-By the time of this post written, unfortunately, there still exist one annoying bug in Gatsby v2.3.27. That's the historic error  statement: **`TypeError: Cannot read property 'childImageSharp' of null`**.
+By the time of this post written, unfortunately, there still exist one annoying bug in Gatsby v2.3.27. That's the historic error statement: **`TypeError: Cannot read property 'childImageSharp' of null`**.
 
 ![gatsby error](./assets/gatsby_error_20190706_8.png)]
 
-This confused me for a long time, occasionally it popped up and gave you an accidental surprise. It was reported early in issue [#2567](https://github.com/gatsbyjs/gatsby/issues/2567) on Oct 21, 2017. The solution for that issue ended up with  removing **`.cache`** folder. So, each time the error jumped out, I would first stop server by **`ctrl+c`** then execute the following command and refresh page to get it back:
+This confused me for a long time, occasionally it popped up and gave you an accidental surprise. It was reported early in issue [#2567](https://github.com/gatsbyjs/gatsby/issues/2567) on Oct 21, 2017. The solution for that issue ended up with removing **`.cache`** folder. So, each time the error jumped out, I would first stop server by **`ctrl+c`** then execute the following command and refresh page to get it back:
 
 ```
 # in Mac OSX enviroment:
@@ -138,7 +132,6 @@ $ rm -rf .cache && gatsby develop
 ```
 
 This really works, and is the only approach to eliminate the error so far. The negative impact of this bug to my product is that each time I create tutorial content with generator I must stop server first then create tutorial last execute the command above, lead to a broken user experience.
-
 
 ### What's the best practice to persuade clients to use it
 
@@ -148,12 +141,11 @@ The internet world by nature consists of a variety of content, text, image, musi
 
 Apart from those How tos, I summarized the following viewpoints to improve the Gatsby adoption in clients business:
 
-* leveraging the legacy system content or data by plugin extraction
-* resolve the performance bottle neck problem through a Gatsby way
-* start with the internal project, minor functionality unit
-* introduce to reactjs stack based development team
-* progressively adoption and migration little by little
-* aim to clients who want to use cloud service and to cut cost in IT infrastructure
+- leveraging the legacy system content or data by plugin extraction
+- resolve the performance bottle neck problem through a Gatsby way
+- start with the internal project, minor functionality unit
+- introduce to reactjs stack based development team
+- progressively adoption and migration little by little
+- aim to clients who want to use cloud service and to cut cost in IT infrastructure
 
-
-This is a short idea list I can think of currently about traditional web system migration to Gatsby. With more and more the projects I involved, I believe this list will continue grow.  Web technology is evolving constantly with fun and efficiency, that's how Gatsby comes, let's make it clear and lead a better life in partnership with Gatsby.
+This is a short idea list I can think of currently about traditional web system migration to Gatsby. With more and more the projects I involved, I believe this list will continue grow. Web technology is evolving constantly with fun and efficiency, that's how Gatsby comes, let's make it clear and lead a better life in partnership with Gatsby.
