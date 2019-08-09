@@ -1,6 +1,5 @@
 # One way publishing of your blog posts from a git repo to dev.to
 
-
 ## before commitment to remote repository
 
 prettify md files locally first, or cause travis build failure!
