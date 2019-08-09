@@ -149,4 +149,4 @@ Apart from those How tos, I summarized the following viewpoints to improve the G
 - progressively adoption and migration little by little
 - aim to clients who want to use cloud service and to cut cost in IT infrastructure
 
-This is a short idea list I can think of currently about traditional web system migration to Gatsby. With more and more the projects I involved, I believe this list will continue grow. Web technology is evolving constantly with fun and efficiency, that's how Gatsby comes, let's make it clear and lead a better life in partnership with Gatsby.
+This is a short idea list I can think of currently about traditional web system migration to Gatsby. With more and more projects I involved, I believe this list will continue grow. Web technology is evolving constantly with fun and efficiency, that's how Gatsby comes, let's make it clear and lead a better life in partnership with Gatsby.

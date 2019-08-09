@@ -1,5 +1,15 @@
 # One way publishing of your blog posts from a git repo to dev.to
 
+
+## before commitment to remote repository
+
+prettify md files locally first, or cause travis build failure!
+
+```
+$ yarn run prettier:write
+$ yarn run prettier:check
+```
+
 ## First, what is dev.to?
 
 https://dev.to is a free and open source blogging platform for developers.
