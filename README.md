@@ -1,12 +1,11 @@
 # One way publishing of your blog posts from a git repo to dev.to
 
-## before commitment to remote repository
+## Before commitment to the remote repository
 
 prettify md files locally first, or cause travis build failure!
 
 ```
-$ yarn run prettier:write
-$ yarn run prettier:check
+$ yarn run prettier:write && yarn run prettier:check
 ```
 
 ## First, what is dev.to?

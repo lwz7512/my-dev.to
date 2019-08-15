@@ -1,6 +1,5 @@
 ---
-published: false
-title: "Thinking in Gatsby way series - to build a static web application overview"
+title: "Why More Developers Should Shift to Gatsby"
 cover_image: "https://raw.githubusercontent.com/lwz7512/my-dev.to/master/blog-posts/thinking-in-gatsby-overview/assets/gatsby_thinking_in2.png"
 description: "Gatsby framework deserves you investing time to learn, this article will give you answers don't exist elsewhere."
 tags: reactjs, graphql, cms, jamstack
