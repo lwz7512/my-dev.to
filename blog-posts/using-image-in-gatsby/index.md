@@ -1,6 +1,6 @@
 ---
 title: Using image in Gatsby application by a clear way
-cover_image: 
+cover_image:
 description: image display is a common task in web devevlopment, how to use it in Gatsby application may seem confused, this article described the anwser to it.
 tags: gatsby, reactjs, image
 series: thinking in Gatsby
@@ -8,7 +8,6 @@ published: false
 ---
 
 Gatsby has many features to win the developers' love and prevails over other mainstream static site generators. One of those features is [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/) component. It solved the image optimization problem with the specified dimention scope you defined, progressively and responsively presenting to the webpage gives user a comfortable browsing experience.
-
 
 ## Steps to use gatsby-image
 
@@ -30,7 +29,7 @@ In the step 2, you tell the Gatsby build tool, where to find the `root` director
 },
 ```
 
-In the step 3, you tell gatsby-image component instance where to get the file: graphql query result. 
+In the step 3, you tell gatsby-image component instance where to get the file: graphql query result.
 
 ```
 export const query = graphql`
@@ -50,9 +49,7 @@ export const query = graphql`
 
 ## Which direcory to put image?
 
-
 After seeing this graphql code snippet, you may wonder where's the `blog/avatars/kyle-mathews.jpeg`? Is it under project root or src/images? let's take a test from a blank gatsby project.
-
 
 create gatsby project:
 
@@ -62,13 +59,11 @@ $ gatsby new using-image-in-gatsby
 
 place kyle-mathews.jpeg image under `src/images/blog/avatars/`.
 
-
 replace original index.js content with the following code:
 
 ![index page code](./assets/index_20190815_37.png)
 
 > Note: Dont forget the `data` property in IndexPage properties.
-
 
 Now, we can start the websit without the need to modify other stuff:
 
@@ -78,14 +73,11 @@ $ gatsby develop
 
 Visit the `http://localhost:8000/` in your browser, you'll see the correct result.
 
-
 ![kyle](./assets/kyle_20190815_38.png)
-
 
 This experiment verified our speculation, that is:
 
 > gatsy-image/graphql query using relative path under the path defined in gatsby-source-filesystem as query condition!
-
 
 ## How about dynamic image source value?
 
@@ -99,7 +91,6 @@ file structure:
       ├── pages
         ├── example-post.md
         ├── awesome-image.png
-
 
 example-post.md:
 
@@ -118,7 +109,6 @@ How to restructure the images path in a reasonable way?
 
 - Step one: deine a new content source in `gatsby-config.js`
 
-
 ```
 plugins: [
     {
@@ -129,13 +119,12 @@ plugins: [
       },
     },
     ...
-]    
+]
 ```
 
 - Step two: place all the images under `content/assets`
 
 > seperate image files and .md files to different folder
-
 
     ├── content
       ├── posts
@@ -147,10 +136,10 @@ plugins: [
           |── ...
     ├── src
 
-
 - Step three: reference the image using relative path in markdown file metadata.
 
 example-post.md:
+
 ```
 ---
 title: My Amazing Post
@@ -165,7 +154,6 @@ Business intro is missing...
 In a normal web application, html img element can use relative or absolute path to assign `src` property. We use image in a native and static way like [the official doc](https://www.gatsbyjs.org/docs/static-folder/) said, place image under `static` folder, display image in webpage as we expected. But, when we build and deploy the gatsby site the [GitHub Pages](https://pages.github.com/), visit it under an URL pattern like this:
 
 https://username.github.io/your-gatsby-website/
-
 
 The images declared by img tag broken all!
 
@@ -185,7 +173,6 @@ For example:
 `ueofcweb` is the github project name, `images/project-home.jpg` is actually under `ueofcweb/static`.
 
 If you're refactoring a traditional website which use a large amount of img tags, the second option would be a cheap option. My production [officail site](https://github.com/runbytech/ueofcweb) is migrated from bootstrap/jquey stack, while I was adding it to the [Gatsby showcase](https://www.gatsbyjs.org/showcase/), I spend hours to figure out that the second approach is the best way to me.
-
 
 Gatsby image is the best responsive image solution which I have met. It frees you from the tedious optimization work in the build phase, add good performance and excellent user experience to your website. It deserves you to spend time to delve into and use proficientlly.
 
