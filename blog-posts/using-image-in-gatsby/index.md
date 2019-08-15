@@ -1,10 +1,10 @@
 ---
 title: Using image in Gatsby application by a clear way
 cover_image:
-description: image display is a common task in web devevlopment, how to use it in Gatsby application may seem confused, this article described the anwser to it.
+description: image display is a common task in web development, how to use it in Gatsby application may seem confused, this article described the anwser to it.
 tags: gatsby, reactjs, image
 series: thinking in Gatsby
-published: false
+published: true
 ---
 
 Gatsby has many features to win the developers' love and prevails over other mainstream static site generators. One of those features is [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/) component. It solved the image optimization problem with the specified dimention scope you defined, progressively and responsively presenting to the webpage gives user a comfortable browsing experience.
