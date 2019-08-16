@@ -1,13 +1,13 @@
 ---
 title: Using image in Gatsby application by a clear way
 cover_image:
-description: image display is a common task in web development, how to use it in Gatsby application may seem confused, this article described the anwser to it.
+description: image display is a common task in web development, how to use it in Gatsby application may seem confused, this article described the answer to it.
 tags: gatsby, reactjs, image
 series: thinking in Gatsby
 published: true
 ---
 
-Gatsby has many features to win the developers' love and prevails over other mainstream static site generators. One of those features is [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/) component. It solved the image optimization problem with the specified dimention scope you defined, progressively and responsively presenting to the webpage gives user a comfortable browsing experience.
+Gatsby has many features to win the developers' love and prevails over other mainstream static site generators. One of those features is [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/) component. It solved the image optimization problem with the specified dimension scope you defined, progressively and responsively presenting to the webpage gives user a comfortable browsing experience.
 
 ## Steps to use gatsby-image
 
@@ -47,7 +47,7 @@ export const query = graphql`
 `
 ```
 
-## Which direcory to put image?
+## Which directory to put image?
 
 After seeing this graphql code snippet, you may wonder where's the `blog/avatars/kyle-mathews.jpeg`? Is it under project root or src/images? let's take a test from a blank gatsby project.
 
@@ -65,7 +65,7 @@ replace original index.js content with the following code:
 
 > Note: Dont forget the `data` property in IndexPage properties.
 
-Now, we can start the websit without the need to modify other stuff:
+Now, we can start the website without the need to modify the other stuff:
 
 ```
 $ gatsby develop
@@ -77,13 +77,13 @@ Visit the `http://localhost:8000/` in your browser, you'll see the correct resul
 
 This experiment verified our speculation, that is:
 
-> gatsy-image/graphql query using relative path under the path defined in gatsby-source-filesystem as query condition!
+> gatsy-image query(graphql) using relative path under the path defined in gatsby-source-filesystem as query condition!
 
-## How about dynamic image source value?
+## How about the dynamic image source value?
 
 Above example use static value `blog/avatars/kyle-mathews.jpeg` to query in graphql expression. Then, what if the query condition is from markdown file meta data?
 
-Offical doc about [Working witg image in Markdown posts and pages](https://www.gatsbyjs.org/docs/working-with-images-in-markdown/) told us the placing the featuredImage in the same position of markdown file:
+Official doc about [Working with image in Markdown posts and pages](https://www.gatsbyjs.org/docs/working-with-images-in-markdown/) told us the placing the featuredImage in the same position of markdown file:
 
 file structure:
 
@@ -103,7 +103,7 @@ featuredImage: ./awesome-image.png
 Content goes here!
 ```
 
-In this solution, it works though, but, if you have many posts which include many images in each post, the directory struture will grow big dramatically and end up with chaos.
+In this solution, it works though, but, if you have many posts which include many images in each post, the directory structure will grow big dramatically and end up with chaos.
 
 How to restructure the images path in a reasonable way?
 
@@ -124,7 +124,7 @@ plugins: [
 
 - Step two: place all the images under `content/assets`
 
-> seperate image files and .md files to different folder
+> separate image files and .md files to different folder
 
     ├── content
       ├── posts
@@ -157,7 +157,7 @@ https://username.github.io/your-gatsby-website/
 
 The images declared by img tag broken all!
 
-Although all the `gatsby-image`s built by `$ gatsby build --prefx-paths` works, but those native imgs dont' work.
+Although all the `gatsby-image`s built by `$ gatsby build --prefx-paths` works, but those native imgs don't work.
 
 What's the solution?
 
@@ -174,10 +174,11 @@ For example:
 
 If you're refactoring a traditional website which use a large amount of img tags, the second option would be a cheap option. My production [officail site](https://github.com/runbytech/ueofcweb) is migrated from bootstrap/jquey stack, while I was adding it to the [Gatsby showcase](https://www.gatsbyjs.org/showcase/), I spend hours to figure out that the second approach is the best way to me.
 
-Gatsby image is the best responsive image solution which I have met. It frees you from the tedious optimization work in the build phase, add good performance and excellent user experience to your website. It deserves you to spend time to delve into and use proficientlly.
 
 Last note I can give in this post is:
 
 ```
 Do not include folders under static folder, it's a BAD practice ending up with build error `childImageSharp' of null.
 ```
+
+Gatsby image is the best responsive image solution which I have met. It frees you from the tedious optimization work in the build phase, add good performance and excellent user experience to your website. It deserves you to spend time to delve into and use proficiently.
