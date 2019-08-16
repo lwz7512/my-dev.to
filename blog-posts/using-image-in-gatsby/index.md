@@ -174,7 +174,6 @@ For example:
 
 If you're refactoring a traditional website which use a large amount of img tags, the second option would be a cheap option. My production [officail site](https://github.com/runbytech/ueofcweb) is migrated from bootstrap/jquey stack, while I was adding it to the [Gatsby showcase](https://www.gatsbyjs.org/showcase/), I spend hours to figure out that the second approach is the best way to me.
 
-
 Last note I can give in this post is:
 
 ```
